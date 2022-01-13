@@ -23,7 +23,17 @@ const mondayWork = function (task) {
   
     return statement;
 }
- 
+function wrapAdjective(outerParameter = '*'){
+    const inner = function (innerParameter = 'special'){
+        return `You are ${outerParameter}${innerParameter}${outerParameter}.`;
+    };
+    return inner();
+}
+
+saturdayFun();
+mondayWork();
+wrapAdjective(); 
+
 /*function wrapAdjective(outerParameter){
     let specialOperator;
     let adj;
@@ -44,14 +54,3 @@ const mondayWork = function (task) {
     return inner();
 }
 */
-
-function wrapAdjective(outerParameter = '*'){
-    const inner = function (innerParameter = 'special'){
-        return `You are ${outerParameter}${innerParameter}${outerParameter}.`;
-    };
-    return inner();
-}
-
-//saturdayFun();
-//mondayWork();
-//wrapAdjective();
